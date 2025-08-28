@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMS Cloud Partner Integration Certification Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="date"], textarea, select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            min-width: 200px;
+        }
+        input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+        .checkbox-item label {
+            margin-bottom: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .inline-group {
+            display: flex;
+            gap: 15px;
+        }
+        .inline-group .form-group {
+            flex: 1;
+        }
+        .signature-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+        .rms-section {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+            border: 2px solid #3498db;
+        }
+        .print-button {
+            background: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .print-button:hover {
+            background: #2980b9;
+        }
+        @media print {
+            body { background: white; }
+            .form-container { box-shadow: none; }
+            .print-button { display: none; }
+        }
+        .required {
+            color: #e74c3c;
+        }
+        .note {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>RMS Cloud Partner Integration Certification Form</h1>
+
+        <h2>Partner Information</h2>
+        
+        <div class="form-group">
+            <label for="partner-name">Partner Company Name <span class="required">*</span></label>
+            <input type="text" id="partner-name" name="partner-name" required>
+        </div>
+
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="partner-id">Partner ID/Agent ID</label>
+                <input type="text" id="partner-id" name="partner-id">
+            </div>
+            <div class="form-group">
+                <label for="year-established">Year Established</label>
+                <input type="text" id="year-established" name="year-established">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Company Website URL</label>
+            <input type="url" id="website" name="website">
+        </div>
+
+        <div class="form-group">
+            <label for="logo">Company Logo</label>
+            <input type="text" id="logo" name="logo" placeholder="Please attach high-resolution logo file">
+            <div class="note">Note: Attach logo file separately or provide file path/URL</div>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Primary Office Address</label>
+            <textarea id="address" name="address"></textarea>
+        </div>
+
+        <h2>Key Contact Information</h2>
+
+        <h3>Business/Sales Contact</h3>
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="bus-name">Full Name</label>
+                <input type="text" id="bus-name" name="bus-name">
+            </div>
+            <div class="form-group">
+                <label for="bus-title">Position/Title</label>
+                <input type="text" id="bus-title" name="bus-title">
+            </div>
+        </div>
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="bus-email">Email Address</label>
+                <input type="email" id="bus-email" name="bus-email">
+            </div>
+            <div class="form-group">
+                <label for="bus-phone">Phone Number</label>
+                <input type="tel" id="bus-phone" name="bus-phone">
+            </div>
+        </div>
+
+        <h3>Technical Contact</h3>
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="tech-name">Full Name</label>
+                <input type="text" id="tech-name" name="tech-name">
+            </div>
+            <div class="form-group">
+                <label for="tech-title">Position/Title</label>
+                <input type="text" id="tech-title" name="tech-title">
+            </div>
+        </div>
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="tech-email">Email Address</label>
+                <input type="email" id="tech-email" name="tech-email">
+            </div>
+            <div class="form-group">
+                <label for="tech-phone">Phone Number</label>
+                <input type="tel" id="tech-phone" name="tech-phone">
+            </div>
+        </div>
+
+        <h3>Support Contact</h3>
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="sup-name">Full Name</label>
+                <input type="text" id="sup-name" name="sup-name">
+            </div>
+            <div class="form-group">
+                <label for="sup-title">Position/Title</label>
+                <input type="text" id="sup-title" name="sup-title">
+            </div>
+        </div>
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="sup-email">Email Address</label>
+                <input type="email" id="sup-email" name="sup-email">
+            </div>
+            <div class="form-group">
+                <label for="sup-phone">Phone Number</label>
+                <input type="tel" id="sup-phone" name="sup-phone">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="support-hours">Support Hours (include timezone)</label>
+            <input type="text" id="support-hours" name="support-hours">
+        </div>
+        <div class="form-group">
+            <label for="support-sla">Support SLA Overview</label>
+            <textarea id="support-sla" name="support-sla"></textarea>
+        </div>
+
+        <h2>Partner Business Information</h2>
+
+        <h3>Geographic Coverage</h3>
+        <label>Select all regions where your solution is available and actively supported:</label>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="na" name="regions">
+                <label for="na">North America</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="sa" name="regions">
+                <label for="sa">South America</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="eu" name="regions">
+                <label for="eu">Europe</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="mea" name="regions">
+                <label for="mea">Middle East & Africa</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="asia" name="regions">
+                <label for="asia">Asia</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="anz" name="regions">
+                <label for="anz">Australia & New Zealand</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="other-region">Other Region</label>
+            <input type="text" id="other-region" name="other-region">
+        </div>
+
+        <h3>Target Market Segments</h3>
+        <label>Select all property types your solution is designed for:</label>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="hotels" name="segments">
+                <label for="hotels">Hotels & Resorts</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="vacation" name="segments">
+                <label for="vacation">Vacation Rentals</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="hostels" name="segments">
+                <label for="hostels">Hostels</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="campgrounds" name="segments">
+                <label for="campgrounds">Campgrounds/RV Parks</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="marinas" name="segments">
+                <label for="marinas">Marinas</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="other-segment">Other Property Type</label>
+            <input type="text" id="other-segment" name="other-segment">
+        </div>
+
+        <h3>Property Size Focus</h3>
+        <label>Select all that apply:</label>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="small" name="size">
+                <label for="small">Small (1-25 rooms/units)</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="medium" name="size">
+                <label for="medium">Medium (26-100 rooms/units)</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="large" name="size">
+                <label for="large">Large (100+ rooms/units)</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="customer-profile">Ideal Customer Profile</label>
+            <textarea id="customer-profile" name="customer-profile" placeholder="Describe your ideal customer, including property type, size, business model, geographic location, and key challenges they face that your integration helps solve (if applicable)"></textarea>
+        </div>
+
+        <h2>Integration Details</h2>
+
+        <h3>Solution Overview</h3>
+        <div class="form-group">
+            <label for="solution-name">Product/Solution Name(s)</label>
+            <input type="text" id="solution-name" name="solution-name">
+        </div>
+
+        <h3>Solution Category</h3>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="channel-mgr" name="category">
+                <label for="channel-mgr">Channel Manager</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="revenue-mgmt" name="category">
+                <label for="revenue-mgmt">Revenue Management System</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pms" name="category">
+                <label for="pms">Property Management System</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="booking-engine" name="category">
+                <label for="booking-engine">Online Booking Engine</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="guest-exp" name="category">
+                <label for="guest-exp">Guest Experience/Engagement</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pos" name="category">
+                <label for="pos">Point of Sale (POS)</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="payment" name="category">
+                <label for="payment">Payment Gateway</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="marketing" name="category">
+                <label for="marketing">Marketing Automation</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="analytics" name="category">
+                <label for="analytics">Business Intelligence/Analytics</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="mobile" name="category">
+                <label for="mobile">Mobile App</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="messaging" name="category">
+                <label for="messaging">Guest Messaging</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="other-category">Other Category</label>
+            <input type="text" id="other-category" name="other-category">
+        </div>
+
+        <div class="form-group">
+            <label for="solution-desc">Brief Solution Description (if applicable)</label>
+            <textarea id="solution-desc" name="solution-desc"></textarea>
+        </div>
+
+        <h3>Integration Scope</h3>
+        <label>Select all data elements and processes included in your integration:</label>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="property-info" name="scope">
+                <label for="property-info">Property Information</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="availability" name="scope">
+                <label for="availability">Room/Unit Availability & Rates</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="guest-profiles" name="scope">
+                <label for="guest-profiles">Guest Profiles</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="reservations" name="scope">
+                <label for="reservations">Reservations</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="group-bookings" name="scope">
+                <label for="group-bookings">Group Bookings</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="financial" name="scope">
+                <label for="financial">Financial Transactions/Payments</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="reporting" name="scope">
+                <label for="reporting">Reporting/Analytics</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="other-scope">Other Scope Elements</label>
+            <input type="text" id="other-scope" name="other-scope">
+        </div>
+
+        <h2>Technical Integration Details</h2>
+
+        <h3>API Endpoints Utilized</h3>
+        <label>Select all RMS Cloud API endpoints your integration utilizes:</label>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="api-properties" name="endpoints">
+                <label for="api-properties">Properties</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="api-categories" name="endpoints">
+                <label for="api-categories">Categories</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="api-rates" name="endpoints">
+                <label for="api-rates">Rates</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="api-availability" name="endpoints">
+                <label for="api-availability">Availability</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="api-quote" name="endpoints">
+                <label for="api-quote">Rate Quote</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="api-sundries" name="endpoints">
+                <label for="api-sundries">Sundries/Extras</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="api-guest" name="endpoints">
+                <label for="api-guest">Guest Management</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="api-reservations" name="endpoints">
+                <label for="api-reservations">Reservations</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="api-transactions" name="endpoints">
+                <label for="api-transactions">Transactions</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="other-endpoints">Other API Endpoints</label>
+            <input type="text" id="other-endpoints" name="other-endpoints">
+        </div>
+
+        <div class="form-group">
+            <label for="integration-arch">Integration Architecture</label>
+            <textarea id="integration-arch" name="integration-arch" placeholder="Describe how your integration works with RMS Cloud, including data flow direction, synchronization frequency, and failover/recovery mechanisms (if applicable)"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="rms-setup">RMS Cloud Setup Requirements</label>
+            <textarea id="rms-setup" name="rms-setup" placeholder="Outline all configuration requirements within RMS Cloud necessary for your integration to function properly (e.g., specific rate types, agents, sundries etc.) - if applicable"></textarea>
+        </div>
+
+        <h2>Implementation Process</h2>
+
+        <div class="form-group">
+            <label for="impl-time">Average Implementation Time</label>
+            <input type="text" id="impl-time" name="impl-time" placeholder="e.g., 5 days, 2 weeks">
+        </div>
+
+        <div class="form-group">
+            <label for="impl-process">Implementation Process Overview (if applicable)</label>
+            <textarea id="impl-process" name="impl-process" placeholder="Provide a brief overview of your typical implementation process, including key milestones and required resources from the property"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="onboarding">Customer Onboarding (if applicable)</label>
+            <textarea id="onboarding" name="onboarding" placeholder="Describe your customer onboarding process, including training and documentation provided"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="monitoring">Performance Monitoring</label>
+            <textarea id="monitoring" name="monitoring" placeholder="Describe how you monitor integration performance and notify customers of issues (if applicable)"></textarea>
+        </div>
+
+        <h2>Data Security & Compliance</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="pci" name="compliance">
+                <label for="pci">PCI DSS Compliant</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="gdpr" name="compliance">
+                <label for="gdpr">GDPR Compliant</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="soc2" name="compliance">
+                <label for="soc2">SOC 2 Certified</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="iso27001" name="compliance">
+                <label for="iso27001">ISO 27001 Certified</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="other-compliance">Other Compliance/Certifications</label>
+            <input type="text" id="other-compliance" name="other-compliance">
+        </div>
+
+        <div class="form-group">
+            <label for="security-info">Security Protocols and Data Handling Practices</label>
+            <textarea id="security-info" name="security-info" placeholder="Provide additional information about your security protocols and data handling practices (if applicable)"></textarea>
+        </div>
+
+        <h2>References & Certification</h2>
+
+        <h3>Customer References</h3>
+        <div class="form-group">
+            <label for="ref-property">Property Name</label>
+            <input type="text" id="ref-property" name="ref-property">
+        </div>
+        <div class="form-group">
+            <label for="ref-contact">Contact Person</label>
+            <input type="text" id="ref-contact" name="ref-contact">
+        </div>
+        <div class="form-group">
+            <label for="ref-email-phone">Email/Phone</label>
+            <input type="text" id="ref-email-phone" name="ref-email-phone">
+        </div>
+        <div class="form-group">
+            <label for="ref-date">Integration Date</label>
+            <input type="date" id="ref-date" name="ref-date">
+        </div>
+
+        <h2>Additional Information</h2>
+
+        <h3>Marketing Materials</h3>
+        <label>Do you have integration-specific marketing materials available?</label>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="marketing-yes" name="marketing-materials">
+                <label for="marketing-yes">Yes (please attach)</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="marketing-no" name="marketing-materials">
+                <label for="marketing-no">No</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="usp">Unique Selling Points (if applicable)</label>
+            <textarea id="usp" name="usp" placeholder="Describe key differentiators and unique value propositions of your integration"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="roadmap">Integration Roadmap (if applicable)</label>
+            <textarea id="roadmap" name="roadmap" placeholder="Outline planned enhancements or additions to your RMS Cloud integration over the next 12 months"></textarea>
+        </div>
+
+        <div class="signature-section">
+            <h2>Certification Agreement</h2>
+            <p>By submitting this form, I certify that:</p>
+            <ul>
+                <li>All information provided is accurate and complete</li>
+                <li>Our organization agrees to maintain the integration</li>
+                <li>We will notify RMS Cloud of significant changes to our integration</li>
+                <li>We will participate in periodic recertification as required</li>
+            </ul>
+
+            <div class="inline-group">
+                <div class="form-group">
+                    <label for="cert-name">Name <span class="required">*</span></label>
+                    <input type="text" id="cert-name" name="cert-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="cert-position">Position <span class="required">*</span></label>
+                    <input type="text" id="cert-position" name="cert-position" required>
+                </div>
+            </div>
+            <div class="inline-group">
+                <div class="form-group">
+                    <label for="cert-signature">Digital Signature</label>
+                    <input type="text" id="cert-signature" name="cert-signature" placeholder="Type your full name to serve as digital signature">
+                </div>
+                <div class="form-group">
+                    <label for="cert-date">Date</label>
+                    <input type="date" id="cert-date" name="cert-date">
+                </div>
+            </div>
+        </div>
+
+        <div class="rms-section">
+            <h2>For RMS Cloud Use Only</h2>
+            <h3>Integration Approval Status:</h3>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="approved" name="approval-status">
+                    <label for="approved">Approved</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="pending" name="approval-status">
+                    <label for="pending">Pending</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="rejected" name="approval-status">
+                    <label for="rejected">Rejected</label>
+                </div>
+            </div>
+
+            <div class="inline-group">
+                <div class="form-group">
+                    <label for="cert-date-rms">Certification Date</label>
+                    <input type="date" id="cert-date-rms" name="cert-date-rms">
+                </div>
+                <div class="form-group">
+                    <label for="certified-by">Certified By</label>
+                    <input type="text" id="certified-by" name="certified-by">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rms-notes">Notes</label>
+                <textarea id="rms-notes" name="rms-notes"></textarea>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 20px 0;">
+            <button class="print-button" onclick="window.print()">Print Form</button>
+            <button class="print-button" onclick="exportFormData()" style="background: #27ae60; margin-left: 10px;">Export Data</button>
+            <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importFormData(event)">
+            <button class="print-button" onclick="document.getElementById('importFile').click()" style="background: #f39c12; margin-left: 10px;">Import Data</button>
+            <button class="print-button" onclick="clearForm()" style="background: #e74c3c; margin-left: 10px;">Clear Form</button>
+        </div>
+
+        <script>
+            // Auto-fill current date for certification
+            document.getElementById('cert-date').valueAsDate = new Date();
+            
+            // Function to collect all form data
+            function collectFormData() {
+                const formData = {};
+                const inputs = document.querySelectorAll('input, textarea, select');
+                inputs.forEach(inp => {
+                    if (inp.type === 'checkbox') {
+                        formData[inp.id] = inp.checked;
+                    } else {
+                        formData[inp.id] = inp.value;
+                    }
+                });
+                return formData;
+            }
+
+            // Function to populate form with data
+            function populateForm(formData) {
+                Object.keys(formData).forEach(key => {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        if (element.type === 'checkbox') {
+                            element.checked = formData[key];
+                        } else {
+                            element.value = formData[key];
+                        }
+                    }
+                });
+            }
+
+            // Export form data as JSON file
+            function exportFormData() {
+                const formData = collectFormData();
+                const companyName = formData['partner-name'] || 'Partner';
+                const filename = `RMS_Certification_${companyName.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.json`;
+                
+                const dataStr = JSON.stringify(formData, null, 2);
+                const dataBlob = new Blob([dataStr], {type: 'application/json'});
+                
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(dataBlob);
+                link.download = filename;
+                link.click();
+            }
+
+            // Import form data from JSON file
+            function importFormData(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        try {
+                            const formData = JSON.parse(e.target.result);
+                            populateForm(formData);
+                            alert('Form data imported successfully!');
+                        } catch (error) {
+                            alert('Error importing file. Please ensure it\'s a valid JSON file.');
+                        }
+                    };
+                    reader.readAsText(file);
+                }
+            }
+
+            // Clear all form data
+            function clearForm() {
+                if (confirm('Are you sure you want to clear all form data?')) {
+                    const inputs = document.querySelectorAll('input, textarea, select');
+                    inputs.forEach(inp => {
+                        if (inp.type === 'checkbox') {
+                            inp.checked = false;
+                        } else if (inp.type !== 'file') {
+                            inp.value = '';
+                        }
+                    });
+                    // Reset current date
+                    document.getElementById('cert-date').valueAsDate = new Date();
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
